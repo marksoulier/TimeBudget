@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.userheading {
+	display:flex;
+	width: 100%
+	
+}
+.userheading > .box {
+	align-content: center;
+	width: 45%;
+}
+

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/* navigation bar */
+body {
+	over-flow:hidden;
+	margin:auto;
+	max-width:1000px;
+}
+/*head title*/
+.header {
+	width:100%;
+	height: 200px;
+}
+.headtitle {
+	text-align: center;
+	font-size: 100px;
+}
+/*listings for course*/
+.topbar {
+	display: flex;
+	flex-wrap: nowrap;
+}
+.topbar > .header {
+	flex-wrap: nowrap;
+	align-content: center;
+}
+.bottomflex {
+	display: flex;
+}
+.bottomflex > .bflex {
+	align-content: center;
+	width:auto;
+	flex-wrap: nowrap;
+}
+/*picture*/
+.mainpic {
+	width:100%;
+	height: 200px;
+	border: 1px solid;
+}
+/*why learn this*/
+.boxoflists {
+	display:flex;
+	width:100%;
+	height:100%;
+	align-content: center;
+	flex-wrap: nowrap;
+}
+.boxoflists > .listof {
+	width: 48%;
+}
+h5 {
+	font-size:50px;
+	margin: 5px;
+}
+ul {
+ margin: 0;
+ font-size:40px;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+font-size: 30px;
+}
+ul.dashed > li:before {
+  content: "-";
+  text-indent: -5px;
+}
+/*minor subject box*/
+.majorlink {
+	text-decoration: none;
+}
+.minorsubjects {
+	display:flex;
+	align-content: center;
+	flex-wrap: wrap;
+}
+.smalltype {
+	diplay:block;
+	font-size: 10px;
+	color: black;
+}
+.minorsubjects > .minorcontainer {
+	display:flex;
+	align-content: center;
+	background-color: white;
+	width:100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.minorcontainer:hover {
+	background-color:lightgray;
+}
+.minorcontainer > .minortitle {
+	text-align: center;
+	font-size: 50px;
+	margin: 5px;
+	width: 85%;
+}
+.minorcontainer > .startbutton {
+	background-color:plum;
+	color: black;
+	width: 15%;
+	margin: 5px;
+	padding: 15px;
+	text-align: center;
+	font-size: 25px;
+	border: 1px solid;
+	justify-content: center;
+}
+.startbutton:hover {
+	background-color:white;
+	color: plum;
+	border: 1px solid plum;
+}
+/*popcontent*/
+.popcontent {
+	display: none;
+	width:100%;
+	margin:0px;
+	background-color: white;
+	flex-direction: column;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h3 {
+	font-size:30px;
+	display: block;
+}
+.popcontent > .twosection {
+	display:flex;
+	padding:5px;
+	width:100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.twosection > .whyl {
+	width: 45%;
+	padding: 5px;
+	background-color: white;
+}

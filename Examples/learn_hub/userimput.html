@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>userinputtest</title>
+<style>
+	.flexbox {
+		display: absolute;
+		max-width: 800px;
+		background-color: lightgray;
+		border-radius: 40px;
+		margin:auto;
+		top: 50px;
+		border: 1px solid;
+	}
+	strong {
+	}
+	.question {
+		padding:20px;
+	}
+	.answer {
+		padding:10px;
+		height:300px;
+	}
+	.add {
+		width:60%;
+		margin:auto;
+		margin-top: 5px;
+		padding:1px;
+		border:2px solid;
+	}
+	.topbutton {
+	display: block;
+	padding:6px;
+	border:1px solid;
+	color:white;
+	font-size: 40px;
+	border-radius: 40px;
+	background-color: gray;
+	margin-left:10px;
+	text-decoration: none;
+	margin-top: 30px;
+}
+	input[type=text], select {
+ margin: auto;
+margin-top: 0px;
+margin-bottom:0px;
+ width:90%;
+padding:5px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize:none;
+		height: 40px;
+ font-size: 20px;
+}
+	input[type=radio], select {
+		margin:20px;
+	}
+	label {
+		text-align: left;
+		margin:10px;
+		display:inline;
+		font-size: 30px;
+		width:90%;
+	}
+</style>
+</head>
+
+<body>
+	<div class="flexbox">
+		<div class="add">
+		<p style="font-size: 20px; text-align: center;">ADD</p></div>
+	<div class="question">
+	<strong>This is the question or the stament asking the user for some response?</strong>
+		</div>
+		<hr>
+<!-- for entering sentances with length 10-30 characters
+		<div class="answer">
+<form action="/action_page.php">
+    <input type="text" id="fname" name="answer" placeholder="Response..">
+    <input type="submit" class="topbutton" value="Submit">
+  </form>
+		</div>
+-->
+<!-- entering sentances with length 30-200 characters
+	<div class="answer">
+<form action="/action_page.php">
+    <input type="text" id="fname" style="font-size:15px; height: 100px; padding: 0 0 75px 5px;" name="answer" placeholder="Response..">
+    <input type="submit" class="topbutton" value="Submit">
+  </form>
+		</div>	
+-->
+		<!-- radio for entering answers
+	<div class="answer">
+<form action="/action_page.php">
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+   <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+    <input type="submit" class="topbutton" value="Submit">
+  </form>
+		</div>	
+-->
+	<div class="answer" style="height:auto;">
+<form action="/action_page.php">
+	<label for="male">Title of course:</label>	
+  <input type="text" id="fname" name="answer" placeholder="Title..">
+	
+		<label for="male">Author of course:</label>	
+  <input type="text" id="fname" name="answer" placeholder="Author..">
+	
+	<label for="male">Summary:</label>	
+  <input type="text" id="fname" style="font-size:15px; height: 100px; padding: 0 0 75px 5px;" name="answer" placeholder="Summary..">
+	
+	<label for="male">Time course takes in hours:</label>	
+<input type="text" id="fname" name="answer" style="width: 20%; margin-left: 5%;" placeholder="Time..">
+	
+	<label for="male">Why learn it:</label>	
+	  <input type="text" id="fname" name="answer" placeholder="Whylearnit1.."><br>
+	<input type="text" id="fname" name="answer" placeholder="Whylearnit2.."><br>
+	<input type="text" id="fname" name="answer" placeholder="Whylearnit3.."><br>
+	
+	<label for="male">Things that will be learned:</label>	
+	<input type="text" id="fname" name="answer" placeholder="Thingslearned1.."><br>
+	<input type="text" id="fname" name="answer" placeholder="Thingslearned2.."><br>
+	<input type="text" id="fname" name="answer" placeholder="Thingslearned3.."><br>
+	
+	<label for="male">What minor catagory does your course fit in:</label>	
+	    <select id="catagory" name="catagory">
+	  <option value="s">Select major..</option>
+      <option value="Playtime">major1</otption>
+		<option value="Beauty">major2</option>
+      <option value="Fun">major3</option>
+    </select>
+		
+	<label for="male">What minor catagory does your course fit in:</label>	
+			<select id="catagory" name="catagory">
+	  <option value="s">Select minor..</option>
+      <option value="Playtime">minor1</otption>
+		<option value="Beauty">minor2</option>
+      <option value="Fun">minor3</option>
+    </select>
+	
+		<label for="male">Does the course cost:</label><br>
+<input type="radio" id="male" name="gender" value="cost">
+  <label for="male">Cost</label><br>
+  <input type="radio" id="female" name="gender" value="nocost">
+  <label for="female">No cost</label><br>
+	
+		<label for="male">What is the difficulty level:</label><br>
+  <input type="radio" id="male" name="gender" value="Beginner">
+  <label for="male">Beginner</label><br>
+  <input type="radio" id="female" name="gender" value="Intermediate">
+  <label for="female">Intermediate</label><br>
+  <input type="radio" id="other" name="gender" value="Expert">
+  <label for="other">Expert</label>
+    <input type="submit" class="topbutton" value="Submit">
+  </form>
+		</div>	
+<!--
+	<div class="answer">
+		<p>Contents of this box will be a form of some type taking many forms including a submit button</p>
+		</div>
+-->
+	</div>
+</body>
+</html>

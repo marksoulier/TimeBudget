@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* CSS Document */
+.minorsubjects {
+	display:flex;
+	align-content: center;
+	flex-wrap: wrap;
+}
+.smalltype {
+	diplay:block;
+	font-size: 10px;
+	color: black;
+}
+.minorsubjects > .minorcontainer {
+	display:flex;
+	align-content: center;
+	background-color: white;
+	width:100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.minorcontainer:hover {
+	background-color:lightgray;
+}
+.minorcontainer > .minortitle {
+	text-align: center;
+	font-size: 50px;
+	margin: 5px;
+	width: 85%;
+}
+.minorcontainer > .startbutton {
+	background-color:plum;
+	color: black;
+	width: 15%;
+	margin: 5px;
+	padding: 15px;
+	text-align: center;
+	font-size: 25px;
+	border: 1px solid;
+	justify-content: center;
+}
+.startbutton:hover {
+	background-color:white;
+	color: plum;
+	border: 1px solid plum;
+}
