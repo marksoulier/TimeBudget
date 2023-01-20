@@ -6,11 +6,14 @@ def changeOrder(Budget, priority: str, number: int):
         if item[0] == priority:
             Budget.remove(item)
             Budget.insert(number, item)
-    return Budget
+            return Budget, number
+    print("Sorry please enter a valid activity")
+    return Budget, (number-1)
 
 def addPriority(Budget, priority: str):
     Budget.append([priority, 0])
     return Budget
+
 
 def main():
     hours_in_week = 168
@@ -39,7 +42,7 @@ def main():
     while True:
         priority = input("Activity: ")
 
-        Budget = changeOrder(Budget, priority, number)
+        Budget, number = changeOrder(Budget, priority, number)
         number += 1
         print(Budget)
 
