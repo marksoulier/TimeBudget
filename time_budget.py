@@ -73,7 +73,7 @@ def main():
         Budget, number = changeOrder(Budget, priority, number)
         print("")
         number += 1
-    addPriority(Budget, "Other")
+    addPriority(Budget, "other")
     #add hours to each priority
     number = 0
     print("")
@@ -82,12 +82,13 @@ def main():
         print("WELCOME TO TIME-BUDGET.COM \n")
         print("Time Bank\n")
         print("Current balance: ")
+        print("Actvity", "\t", "Hours\n")
         for item in Budget:
             print(item[0], "\t", item[1])
             hours_left -= item[1]
         print("")
         print("Time Remaining:", "\t", hours_left )
-        hours = int(input(Budget[number][0] + ": "))
+        hours = float(input(Budget[number][0] + ": "))
         os.system('cls')
         Budget, number = addHours(Budget, hours, number)
         print("")
@@ -99,18 +100,36 @@ def main():
         print("WELCOME TO TIME-BUDGET.COM \n")
         print("Time Bank\n")
         print("Current balance: ")
+        print("Actvity", "\t", "Hours\n")
         for item in Budget:
-            print(item[0], "\t", item[1])
+            print(item[0], "\t\t", item[1])
             hours_left -= item[1]
         print("")
-        print("Time Remaining:", "\t", hours_left, "\n" )
-        print("Purpose: Inspire other to use and spend time wisely to help them reach a dream filled and fulfilling life")
-        priority, hours = input("Enter in activity and changed hours:").split()
-        hours = int(hours)
-        os.system('cls')
-        Budget, number = addHoursWithPriority(Budget, priority, hours, number)
-        print("")
-        number += 1
+        print("Time Remaining:", "\t", "%.2f" % hours_left, "\n" )
+        print("Type \"done\" if done")
+        priority = input("Or type in an activity to change it hours: ")
+        if priority == 'done':
+            exit = 1
+        else:
+            hours = float(input("new hours: "))
+            os.system('cls')
+            Budget, number = addHoursWithPriority(Budget, priority, hours, number)
+            print("")
+            number += 1
+    os.system('cls')
+    hours_left = hours_in_week
+    print("THANK YOU FOR VISITING TIME-BUDGET.COM \n")
+    print("I would then have you place into a week calender the hours starting with the top priority going down.")
+    print("Purpose: Inspire other to use and spend time wisely to help them reach a dream filled and fulfilling life\n")
+    print("Final time statement: \n")
+    print("Actvity", "\t", "Hours\n")
+    for item in Budget:
+        print(item[0], "\t\t", item[1])
+        hours_left -= item[1]
+    print("")
+    print("Time Remaining:", "\t", "%.2f" % hours_left, "\n" )
+    leave = input("Press Enter to exit...")
+    
 
 
 if __name__ == "__main__":
