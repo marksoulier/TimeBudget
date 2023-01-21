@@ -26,7 +26,7 @@ def addHoursWithPriority(Budget, priority, hours, number):
             return Budget, number
     print("Sorry please enter a valid activity")
     return Budget, (number-1)
-
+ 
 
 def main():
     hours_in_week = 168
@@ -59,16 +59,17 @@ def main():
     print("")
     while number < len(Budget):
         print("WELCOME TO TIME-BUDGET.COM \n")
-        print("Now if your schedule was full of activities in the current activities list which single one would you do")
+        print("Now type your actvity in order of importance")
+        print("Think if your week was almost full of activities in the priorities list what activity would you do?\n")
         print("list of activities: ")
         for i in range(number, len(Budget)):
             print(Budget[i][0])
         print("")
-        print("Current priorities: ")
+        print("List of priorities: ")
         for i in range(number):
             print(Budget[i][0])
         print("")
-        priority = input("Activity: ")
+        priority = input("Next top activity: ")
         os.system('cls')
         Budget, number = changeOrder(Budget, priority, number)
         print("")
