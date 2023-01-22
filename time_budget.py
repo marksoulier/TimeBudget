@@ -91,11 +91,12 @@ def main():
         hours_left = hours_in_week
         print("WELCOME TO TIME-BUDGET.COM \n")
         print("Time Bank\n")
-        print("Now enter the amount of hours you think you will spend on each of these activities next week")
+        print("Now enter the amount of hours you think you will spend on each of these activities next week\n")
         print("Current balance: ")
         print("Actvity", "\t", "Hours\n")
         for item in Budget:
-            print(item[0], "\t", item[1])
+            print(item[0], "\t", end="")
+            print(f'{item[1]}')
             hours_left -= item[1]
         print("")
         print("Time Remaining:", "\t", hours_left )
@@ -113,8 +114,8 @@ def main():
         print("Current balance: ")
         print("Actvity", "\t", "Hours\n")
         for item in Budget:
-            print(item[0], endl="")
-            print(f'\t\t{item[1]}')
+            print(item[0], "\t", end="")
+            print(f'{item[1]}')
             hours_left -= item[1]
         print("")
         print("Time Remaining:", "\t", "%.2f" % hours_left, "\n" )
@@ -136,7 +137,7 @@ def main():
     print("Final time statement: \n")
     print("Actvity", "\t", "Hours\n")
     for item in Budget:
-        print(item[0], "\t\t", item[1])
+        print(item[0], "\t", item[1])
         hours_left -= item[1]
     print("")
     print("Time Remaining:", "\t", "%.2f" % hours_left, "\n" )
