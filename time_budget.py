@@ -35,11 +35,19 @@ def main():
     addPriority(Budget, "sleep")
     #make a list of your priorites
     os.system('cls')
+    print("WELCOME TO TIME-BUDGET.COM \n")
+    print("Purpose: Inspire other to use and spend time wisely to help them reach a dream filled and fulfilling life\n")
+    print("For this example software that I built, I would like you to be completly honest and intentional in reflection of your own life.\n")
+    print("In this sim you will be taken through a few steps in creating your own time budget\n")
+    blank = input("Press Enter to continue....")
+    os.system('cls')
     while exit == 0:
         print("WELCOME TO TIME-BUDGET.COM \n")
         print("List out ALL activites you spend your time doing in a week")
-        print("Try to list around 10-20 activities")
-        print("Examples: (sleep, cooking, school, relaxing, hanging out with freinds, traveling)")
+        print("Examples: (sleep, cooking, school, relaxing, hanging out with freinds, traveling, movie watching, commuting to work)")
+        print("Also include goals you have ie.(learn the guitar, cook gourmet)")
+        print("review your calander to ensure there is no activity you missed")
+        print("Try to place these activities into around 15-20 catagories")
         print("Type \"done\" when done\n")
         print("Current list of activities: ")
         for item in Budget:
@@ -59,8 +67,9 @@ def main():
     print("")
     while number < len(Budget):
         print("WELCOME TO TIME-BUDGET.COM \n")
-        print("Now type your actvity in order of importance")
-        print("Think if your week was almost full of activities in the priorities list what activity would you do?\n")
+        print("Now type your list of actvities in order of importance")
+        print("What activity is most important for you to get done")
+        print("Think: if your week was almost full of activities in the priorities list what activity would you do?\n")
         print("list of activities: ")
         for i in range(number, len(Budget)):
             print(Budget[i][0])
@@ -82,6 +91,7 @@ def main():
         hours_left = hours_in_week
         print("WELCOME TO TIME-BUDGET.COM \n")
         print("Time Bank\n")
+        print("Now enter the amount of hours you think you will spend on each of these activities next week")
         print("Current balance: ")
         print("Actvity", "\t", "Hours\n")
         for item in Budget:
@@ -103,7 +113,8 @@ def main():
         print("Current balance: ")
         print("Actvity", "\t", "Hours\n")
         for item in Budget:
-            print(item[0], "\t\t", item[1])
+            print(item[0], endl="")
+            print(f'\t\t{item[1]}')
             hours_left -= item[1]
         print("")
         print("Time Remaining:", "\t", "%.2f" % hours_left, "\n" )
@@ -120,7 +131,7 @@ def main():
     os.system('cls')
     hours_left = hours_in_week
     print("THANK YOU FOR VISITING TIME-BUDGET.COM \n")
-    print("I would then have you place into a week calender the hours starting with the top priority going down.")
+    print("I would then have you place into a week calender theactivity with its corispoding hours starting with the top priority going down.")
     print("Purpose: Inspire other to use and spend time wisely to help them reach a dream filled and fulfilling life\n")
     print("Final time statement: \n")
     print("Actvity", "\t", "Hours\n")
