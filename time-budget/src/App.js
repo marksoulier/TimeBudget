@@ -74,7 +74,7 @@ const Sidebar = () => {
     <div class="sidebar">
       <button>Priorities</button>
       <button>Budget</button>
-      <button>Time Statitsics</button>
+      <button>Time Statitstics</button>
     </div>
   );
 }
