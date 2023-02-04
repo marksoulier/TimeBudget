@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/TimeBudget/tree/main/time-budget/static/css/main.0c56e05f.css",
-    "main.js": "/TimeBudget/tree/main/time-budget/static/js/main.f6e5b287.js",
-    "static/js/787.0a2d47f3.chunk.js": "/TimeBudget/tree/main/time-budget/static/js/787.0a2d47f3.chunk.js",
-    "static/media/logo.png": "/TimeBudget/tree/main/time-budget/static/media/logo.be854e7e7407b01d1df3.png",
-    "static/media/logo.svg": "/TimeBudget/tree/main/time-budget/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/TimeBudget/tree/main/time-budget/index.html",
-    "main.0c56e05f.css.map": "/TimeBudget/tree/main/time-budget/static/css/main.0c56e05f.css.map",
-    "main.f6e5b287.js.map": "/TimeBudget/tree/main/time-budget/static/js/main.f6e5b287.js.map",
-    "787.0a2d47f3.chunk.js.map": "/TimeBudget/tree/main/time-budget/static/js/787.0a2d47f3.chunk.js.map"
+    "main.css": "/TimeBudget/static/css/main.81d151d3.css",
+    "main.js": "/TimeBudget/static/js/main.f59eb278.js",
+    "static/js/787.0a2d47f3.chunk.js": "/TimeBudget/static/js/787.0a2d47f3.chunk.js",
+    "static/media/logo.png": "/TimeBudget/static/media/logo.be854e7e7407b01d1df3.png",
+    "static/media/logo.svg": "/TimeBudget/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/TimeBudget/index.html",
+    "main.81d151d3.css.map": "/TimeBudget/static/css/main.81d151d3.css.map",
+    "main.f59eb278.js.map": "/TimeBudget/static/js/main.f59eb278.js.map",
+    "787.0a2d47f3.chunk.js.map": "/TimeBudget/static/js/787.0a2d47f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c56e05f.css",
-    "static/js/main.f6e5b287.js"
+    "static/css/main.81d151d3.css",
+    "static/js/main.f59eb278.js"
   ]
 }
