@@ -3,45 +3,50 @@ import './App.css';
 import React, { useState } from 'react';
 
 
-const Form = ({ labels }) => {
+function Form() {
   const [formData, setFormData] = useState({});
 
-  const handleChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value
-    });
-  }
-  
-//   return (
-//     <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '10px' }}>
-//       {labels.map((label, index) => (
-//         <div key={index} style={{ margin: '10px 0' }}>
-//           <label htmlFor={label} style={{ marginRight: '10px' }}>{label}</label>
-//           <input type="text" id={label} style={{ width: '200px', padding: '10px' }} placeholder="hrs" />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-return (
-  <div style={{ padding: '20px', backgroundColor: 'white', borderRadius: '10px' }}>
-    {labels.map((label) => (
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <label htmlFor={label} style={{ width: '30%' }}>{label}</label>
+  const handleChange = event => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    // Submit formData to a SQL database
+  };
+
+  return (
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ width: '30%', display: 'flex', flexDirection: 'row', margin: '10px' }}>
+        
+        <label htmlFor="field1" style={{ fontWeight: 'bold', marginRight: '10px' }}>Field 1:</label>
         <input
-          style={{ width: '70%' }}
           type="text"
-          id={label}
-          name={label}
+          name="field1"
+          id="field1"
+          style={{ width: '100%', padding: '10px', fontSize: '16px' }}
           onChange={handleChange}
-          value={formData[label] || ''}
         />
+        <p style={{ fontSize: '12px', color: 'lightgray' }}>hrs</p>
       </div>
-    ))}
-  </div>
-);
+      <div style={{ width: '30%', display: 'flex', flexDirection: 'row', margin: '20px' }}>
+        <label htmlFor="field2" style={{ fontWeight: 'bold', marginRight: '10px' }}>Field 2:</label>
+        <input
+          type="text"
+          name="field2"
+          id="field2"
+          style={{ width: '40px', padding: '10px', fontSize: '16px' }}
+          onChange={handleChange}
+        />
+        <p style={{ fontSize: '12px', color: 'lightgray' }}>hrs</p>
+      </div>
+      <button type="submit" style={{ width: '30%', padding: '10px', fontSize: '16px', marginTop: '10px' }}>
+        Submit
+      </button>
+    </form>
+  );
 }
+
 const BarGraph = ({ data }) => {
   return (
     <div>
