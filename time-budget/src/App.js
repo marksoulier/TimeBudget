@@ -4,6 +4,7 @@ import Footer from './footer';
 import Form from './Form';
 import React, { useState } from 'react';
 
+
 const Results = ({data}) => {
 
 }
@@ -23,11 +24,12 @@ const BarGraph = ({ data }) => {
 };
 
 const Navigation = () => {
+
   return (
     <nav>
     <img href = "#home" src = "logo.png" alt="" class="logo"></img> 
     <div class="nav-links">
-      <a href="#about">About</a>
+      <a>About</a>
       <a href="#contact">Feedback</a>
       <a href="#contact">Login</a>
     </div>
