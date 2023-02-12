@@ -2,36 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 import Footer from './footer';
 import Form from './Form';
+import TimeManagementPage from './pages/about';
+import BarGraph from './display_data';
 import React, { useState } from 'react';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Results = ({data}) => {
 
 }
 
-const BarGraph = ({ data }) => {
-  return (
-    <div>
-      <h2>Bar Graph</h2>
-      {data.map(({ name, value }, i) => (
-        <div key={i} style={{ display: 'flex', alignItems: 'center' }}>
-          <div style={{ width: value + '%', height: '20px', background: 'blue' }} />
-          <span style={{ marginLeft: '10px' }}>{name}</span>
-        </div>
-      ))}
-    </div>
-  );
-};
-
 const Navigation = () => {
 
   return (
     <nav>
-    <img href = "#home" src = "logo.png" alt="" class="logo"></img> 
+      <a href="/" style={{ display: 'block', width: '100%', height: '150%', textDecoration: 'none', color: 'purple' }}>
+        <img src="logo.png" alt="" className="logo" />
+      </a>
     <div class="nav-links">
-      <a>About</a>
-      <a href="#contact">Feedback</a>
-      <a href="#contact">Login</a>
+      <a href="/about">About</a>
+      <a href="/feedback">Feedback</a>
+      <a href="/login" >Login</a>
     </div>
     </nav>
   );
@@ -54,6 +44,7 @@ const Main = () => {
     <main>
       <div class="center">
       <div className="white-box" style={{ width: '40%'}}>
+      
       <Form />
       </div>
       <Results />
@@ -91,18 +82,30 @@ const data = [
   { name: 'May', value: 40 }
 ];
 
+const MainPage = () => {
+  return(
+    <div class= "class1">
+      <div className="container">
+        <Sidebar />
+        <Main />
+        <Display title="Time Statistics" data={data} />
+      </div>
+
+    </div>
+  )
+}
+
 function App() {
   return (
-    <div>
-      <Navigation />
-        <div class= "class1">
-          <div className="container">
-            <Sidebar />
-            <Main />
-            <Display title="Time Statistics" data={data} />
-          </div>
-        </div>
-    </div>
+    <Router>
+      <div>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/about" element={<TimeManagementPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 export default App;

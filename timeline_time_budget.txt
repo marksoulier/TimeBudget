@@ -1,0 +1,21 @@
+This is a projected schedule of getting the MVP off the ground
+
+Each of the follwing stages are the minimal of these requirements happening
+
+
+
+
+1. Taking in input of activites from user and make interactive budget
+Feb 18
+
+3. Finish the rest of the diffrent pages on website
+Feb 18
+
+2. make basic display of time being spent in each catagory
+Feb 25
+
+3. Save user data in database for return 
+Feb 25
+
+4. Ask for tons of feedback on idea
+Mar 4

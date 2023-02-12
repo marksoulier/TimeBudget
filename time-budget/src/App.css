@@ -67,7 +67,9 @@ nav {
   display: flex;
 }
 
-
+.nav img {
+  height: '100%';
+}
 
 .logo {
   width: 50px; /* adjust to the width of your logo */
@@ -120,7 +122,7 @@ aside {
 
 }
 
-nav a:hover, .sidebar button:hover {
+.nav-links a:hover, .sidebar button:hover {
   color: #fff;
   background-color: rgb(28, 202, 193);
 }
